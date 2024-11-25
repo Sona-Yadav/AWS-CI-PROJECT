@@ -1,0 +1,8 @@
+# Update the list of available packages and their versions from the repository
+sudo apt update
+
+# Install the full Ruby package, which includes all necessary tools and libraries for running Ruby programs
+sudo apt install ruby-full -y
+
+# Install wget, a utility used to download files from the web via HTTP, HTTPS, or FTP protocols
+sudo apt install wget -y
