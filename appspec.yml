@@ -1,9 +1,5 @@
 version: 0.0
 os: linux
-
-files:
-  - source: /        # GitHub repository root directory (where your app resides)
-    destination: /home/ubuntu/myapp 
     
 hooks:
   ApplicationStop:
