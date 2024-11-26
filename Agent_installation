@@ -7,16 +7,20 @@ sudo apt install ruby-full -y
 # Install wget, a utility used to download files from the web via HTTP, HTTPS, or FTP protocols
 sudo apt install wget -y
 
-#
-# wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install -- bucket-name is the name of the s3 bucket that containe the codedeploy resource kit files for your region and region-identifier is the identifier for your region.
+# Download the CodeDeploy installation script from the specified S3 bucket
+# Replace `bucket-name` with the name of the S3 bucket containing CodeDeploy resources for your region
+# Replace `region-identifier` with the identifier for your region (e.g., `ap-south-1` for Mumbai region)
 wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
 
-#
+# Make the downloaded installation script executable
 chmod +x ./install
 
-# to install the latest verion of the codedeploy agent on any supported version of ubuntu server except 20.04
+# Install the latest version of the CodeDeploy agent
+# This is valid for any supported Ubuntu version except 20.04
 sudo ./install auto
 
-# start the service
+# Start the CodeDeploy agent service
 sudo service codedeploy-agent start
+
+# Check the status of the CodeDeploy agent to ensure it is running
 sudo service codedeploy-agent status
