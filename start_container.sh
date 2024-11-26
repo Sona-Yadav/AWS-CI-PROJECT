@@ -2,7 +2,7 @@
 set -e
 
 # Pull the Docker image from Docker Hub
-echo
+docker pull sonayadav978/python-flask-project
 
 # Run the Docker image as a container
 echo
